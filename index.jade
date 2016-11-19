@@ -63,7 +63,8 @@ html
         $(window).scroll(function(){
           pc=1-($('html').scrollTop()||$('body').scrollTop())/$(window).height()
           pc<0||$('#head').css({
-            transform:'scale('+pc+','+pc+') translateY('+-($('html').scrollTop()||$('body').scrollTop())+'px)'
+            transform:'scale('+pc+','+pc+') translateY('+-($('html').scrollTop()||$('body').scrollTop())+'px)',
+            opacity:pc
           })
         })
       })
