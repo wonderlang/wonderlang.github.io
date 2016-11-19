@@ -4,7 +4,7 @@ html
   head
     meta(charset='utf8')
     link(rel='icon' href='favicon.png' type='image/png')
-    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
     title The Wonder Programming Language
     link(rel='stylesheet' href='bootstrap.css')
     link(rel='stylesheet' href='prism.css')
@@ -82,7 +82,7 @@ html
     #tail
       .container
         .row
-          .col-sm-6
+          .col-md-6
             pre.c: code.language-wr.line-numbers.
               #. SUPER-SIMPLE CHATBOT
               
@@ -102,7 +102,7 @@ html
               
               #. Keep copying input
               while [1 loop] #reply
-          .col-sm-6
+          .col-md-6
             h1.text-success: u Easy
             p.
               Everything is simple, from installation to programming to package management. 
@@ -111,13 +111,13 @@ html
         hr
         br
         .row
-          .col-sm-6
+          .col-md-6
             h1.text-warning: u Functional
             p.
               <b>Wonder</b> is a functional programming language; most notably, it implements <a href='https://en.wikipedia.org/wiki/De_Bruijn_index' target='_blank'>de Bruijn indices</a> directly in the syntax. 
               Add in other sugary features such as currying, prefix notation, and dynamic typing and you've got yourself one helluva language.
               Not to mention, the syntax is super-flexible, too — readability freak or code-golf maniac, <b>Wonder</b> can adapt to your style.
-          .col-sm-6
+          .col-md-6
             pre.c: code.language-wr.line-numbers.
               #. The following snippets are several ways 
               #. of outputting the ASCII characters.
@@ -138,7 +138,7 @@ html
         hr
         br
         .row
-          .col-sm-6
+          .col-md-6
             pre.c: code.language-wr.line-numbers.
               #. Lambda bodies do not evaluate unless applied.
               @+1 1; #. does not become @2 yet
@@ -153,7 +153,7 @@ html
               
               #. Infinite list operations!
               (map *2) rng 0 oo;
-          .col-sm-6
+          .col-md-6
             h1.text-info: u Lazy
             p.
               <b>Wonder</b> only evaluates when absolutely necessary; this allows us to have infinite lists and other nice goodies.
