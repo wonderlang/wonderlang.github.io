@@ -115,7 +115,7 @@ reply \ loop join "" [
 ];
 
 #. Keep copying input
-(while [1 loop]) #reply</code></pre>
+while #[1 loop] reply</code></pre>
           </div>
           <div class="col-md-6">
             <h1 class="text-success">
@@ -149,14 +149,16 @@ fc rng 0 127                  #. average joe
 join "" map #fc tk 127 gen I  #. total overkill
 (fc (rng 0 127))              #. lisp junkie
 
-#. Fibonacci sequence, pseudo-imperative approach
-(while[
-  1
-  @[
-    S #0 1
-    oN + S #0 0 S #0 1
-  ]
-]) [oN 1; oN 1]</code></pre>
+#. Fibonacci sequence with memoization
+f\ .{
+  0\ 0;
+  1\ 1;
+  @(
+    f\ set #[#0 x] f;
+    x
+  )x\ (+ f - #0 1) f - #0 2
+};
+map #f rng 1 50</code></pre>
           </div>
         </div>
         <hr><br>
