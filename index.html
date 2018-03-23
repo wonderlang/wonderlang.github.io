@@ -1,104 +1,57 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf8">
-    <link rel="shortcut icon" href="favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="description" content="Easy, functional, lazy.">
-    <meta name="keywords" content="wonder programming, wonder programming language, wonder, programming, language, wonderlang, programming language">
-    <link rel="canonical" href="https://wonderlang.github.io">
-    <meta property="og:site_name" content="The Wonder Programming Language">
-    <meta property="og:title" content="The Wonder Programming Language">
-    <meta property="og:description" content="Easy, functional, lazy.">
-    <meta property="og:image" content="favicon.png">
-    <meta property="og:url" content="http://smhacks.com">
-    <meta name="google-site-verification" content="0Mo5H2Zw64z_lvWDZ8ycBtJBoyr8jxIsbuVkGFGYtkQ">
-    <title>The Wonder Programming Language</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="prism.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="prism.js"></script>
-    <script src="highlighter.js"></script>
-    <style>
-      html,body{
-        font-size:105%;
-      }
-      #head{
-        text-align:center;
-        display:table;
-        position:fixed;
-        height:100%;
-        width:100%;
-        top:0;
-        left:0;
-      }
-      #head .container{
-        display:table-cell;
-        vertical-align:middle;
-      }
-      #logo{
-        max-width:50%;
-        height:auto;
-      }
-      #tail{
-        background-color:#fff;
-        display:table;
-        position:absolute;
-        width:100%;
-        top:100%;
-        left:0;
-      }
-      .c{
-        height:100%;
-        border:none;
-        border-radius:0;
-      }
-    </style>
-    <script>
-      $('html').css('display','none')
-      $(function(){
-        scrollTo(0,0)
-        Prism.highlightAll()
-        $('html').delay(200).fadeIn(500)
-        $('a[href^="#"]').click(function(e){
-          e.preventDefault()
-          $(this).blur()
-          $('html,body').animate({
-            scrollTop:$($(this).attr('href')).offset().top
-          },500)
-        })
-        $(window).scroll(function(){
-          pc=1-($('html').scrollTop()||$('body').scrollTop())/$(window).height()
-          pc<0||($('#head').css({
-            transform:'scale('+pc+','+pc+') translateY('+-($('html').scrollTop()||$('body').scrollTop())+'px)',
-            opacity:pc
-          }),$('#tail').css({
-            opacity:1-pc+.3
-          }))
-        })
-      })
-    </script>
-  </head>
-  <body>
-    <div id="head">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12"><img id="logo" src="wonder.png">
-            <h2>Easy - Functional - Lazy</h2><br>
-            <h3><code>npm install -g wonderlang</code></h3><br><a id="headc" href="#tail" class="fa fa-angle-down fa-5x text-danger"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="tail">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <pre class="c"><code class="language-wr line-numbers">#. SUPER-SIMPLE CHATBOT
+<!--output:index.html--><!DOCTYPE html><html><head><meta charset="utf8"><link rel="shortcut icon" href="favicon.png" type="image/png"><link rel="apple-touch-icon" href="favicon.png"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="description" content="Easy, functional, lazy."><meta name="keywords" content="wonder programming, wonder programming language, wonder, programming, language, wonderlang, programming language"><link rel="canonical" href="https://wonderlang.github.io"><meta property="og:site_name" content="The Wonder Programming Language"><meta property="og:title" content="The Wonder Programming Language"><meta property="og:description" content="Easy, functional, lazy."><meta property="og:image" content="favicon.png"><meta property="og:url" content="http://smhacks.com"><meta name="google-site-verification" content="0Mo5H2Zw64z_lvWDZ8ycBtJBoyr8jxIsbuVkGFGYtkQ"><title>The Wonder Programming Language</title><link rel="stylesheet" href="bootstrap.css"><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="prism.js"></script><script src="highlighter.js"></script><style>html,body{
+  font-size:105%;
+}
+#head{
+  text-align:center;
+  display:table;
+  position:fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+}
+#head .container{
+  display:table-cell;
+  vertical-align:middle;
+}
+#logo{
+  max-width:50%;
+  height:auto;
+}
+#tail{
+  background-color:#fff;
+  display:table;
+  position:absolute;
+  width:100%;
+  top:100%;
+  left:0;
+}
+.c{
+  height:100%;
+  border:none;
+  border-radius:0;
+}</style><script>$('html').css('display','none')
+$(function(){
+  scrollTo(0,0)
+  Prism.highlightAll()
+  $('html').delay(200).fadeIn(500)
+  $('a[href^="#"]').click(function(e){
+    e.preventDefault()
+    $(this).blur()
+    $('html,body').animate({
+      scrollTop:$($(this).attr('href')).offset().top
+    },500)
+  })
+  $(window).scroll(function(){
+    pc=1-($('html').scrollTop()||$('body').scrollTop())/$(window).height()
+    pc<0||($('#head').css({
+      transform:'scale('+pc+','+pc+') translateY('+-($('html').scrollTop()||$('body').scrollTop())+'px)',
+      opacity:pc
+    }),$('#tail').css({
+      opacity:1-pc+.3
+    }))
+  })
+})</script></head><body><div id="head"><div class="container"><div class="row"><div class="col-sm-12"><img id="logo" src="wonder.png"><h2>Easy - Functional - Lazy</h2><br><h3><code>npm install -g wonderlang</code></h3><br><a class="fa fa-angle-down fa-5x text-danger" id="headc" href="#tail"></a></div></div></div></div><div id="tail"><div class="container"><div class="row"><div class="col-md-6"><pre class="c"><code class="language-wr line-numbers">#. SUPER-SIMPLE CHATBOT
 
 #. Output then input
 loop \ @(
@@ -115,33 +68,11 @@ reply \ loop join "" [
 ];
 
 #. Keep copying input
-while #[1 loop] reply</code></pre>
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-success">
-              <u>Easy</u>
-            </h1>
-            <p>
-              Everything is simple, from installation to programming to package management. 
-              This is by design! 
-              <b>Wonder</b> is for those who want a no-frills coding process.
-            </p>
-          </div>
-        </div>
-        <hr><br>
-        <div class="row">
-          <div class="col-md-6">
-            <h1 class="text-warning">
-              <u>Functional</u>
-            </h1>
-            <p>
-              <b>Wonder</b> is a functional programming language; most notably, it implements <a href='https://en.wikipedia.org/wiki/De_Bruijn_index' target='_blank'>de Bruijn indices</a> directly in the syntax. 
-              Add in other sugary features such as currying, prefix notation, and dynamic typing and you've got yourself one helluva language.
-              Not to mention, the syntax is super-flexible, too — readability freak or code-golf maniac, <b>Wonder</b> can adapt to your style.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <pre class="c"><code class="language-wr line-numbers">#. The following snippets are several ways 
+while #[1 loop] reply</code></pre></div><div class="col-md-6"><h1 class="text-success"><u>Easy</u></h1><p>Everything is simple, from installation to programming to package management. 
+This is by design! 
+<b>Wonder</b> is for those who want a no-frills coding process.</p></div></div><hr><br><div class="row"><div class="col-md-6"><h1 class="text-warning"><u>Functional</u></h1><p><b>Wonder</b> is a functional programming language; most notably, it implements <a href='https://en.wikipedia.org/wiki/De_Bruijn_index' target='_blank'>de Bruijn indices</a> directly in the syntax. 
+Add in other sugary features such as currying, prefix notation, and dynamic typing and you've got yourself one helluva language.
+Not to mention, the syntax is super-flexible, too — readability freak or code-golf maniac, <b>Wonder</b> can adapt to your style.</p></div><div class="col-md-6"><pre class="c"><code class="language-wr line-numbers">#. The following snippets are several ways 
 #. of outputting the ASCII characters.
 #. (one snippet per line)
 
@@ -158,43 +89,18 @@ f\ .{
     x
   )x\ (+ f - #0 1) f - #0 2
 };
-map #f rng 1 50</code></pre>
-          </div>
-        </div>
-        <hr><br>
-        <div class="row">
-          <div class="col-md-6">
-            <pre class="c"><code class="language-wr line-numbers">#. Lambda bodies do not evaluate unless applied.
+map #f rng 1 50</code></pre></div></div><hr><br><div class="row"><div class="col-md-6"><pre class="c"><code class="language-wr line-numbers">#. Lambda bodies do not evaluate unless applied.
 @+1 1; #. does not become @2 yet
 
 #. Conditionals evaluate one expression
 #. or the other, but not both.
-[
+(
   rl()
     ? "there is input"
     ? "no input"
-]
+)
 
 #. Infinite list operations!
-(map *2) rng 0 oo;</code></pre>
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-info">
-              <u>Lazy</u>
-            </h1>
-            <p>
-              <b>Wonder</b> only evaluates when absolutely necessary; this allows us to have infinite lists and other nice goodies.
-              But <b>Wonder</b> is also built for lazy programmers. Shorter function names, less need for parentheses/punctuation, and the ability to leave out trailing quotes and brackets?
-              <b>Wonder</b> has it all.
-            </p>
-          </div>
-        </div>
-        <hr><br>
-        <div class="text-center">
-          <h1 class="text-danger">What are you waiting for?</h1>
-          <h3><b><a href="https://github.com/wonderlang" target="_blank">Github</a> - <a href="https://github.com/wonderlang/wonder/wiki" target="_blank">Docs</a> - <a href="https://npmjs.org/package/wonderlang" target="_blank">NPM</a> - <a href="https://github.com/wonderlang/wonder/projects" target="_blank">Todo's</a></b></h3>
-        </div>
-      </div><br><br><br>
-    </div>
-  </body>
-</html>
+(map *2) rng 0 oo;</code></pre></div><div class="col-md-6"><h1 class="text-info"><u>Lazy</u></h1><p><b>Wonder</b> only evaluates when absolutely necessary; this allows us to have infinite lists and other nice goodies.
+But <b>Wonder</b> is also built for lazy programmers. Shorter function names, less need for parentheses/punctuation, and the ability to leave out trailing quotes and brackets?
+<b>Wonder</b> has it all.</p></div></div><hr><br><div class="text-center"><h1 class="text-danger">What are you waiting for?</h1><h3><b><a href="https://github.com/wonderlang" target="_blank">Github</a> - <a href="https://github.com/wonderlang/wonder/wiki" target="_blank">Docs</a> - <a href="https://npmjs.org/package/wonderlang" target="_blank">NPM</a> - <a href="https://github.com/wonderlang/wonder/projects" target="_blank">Todo's</a></b></h3></div></div><br><br><br></div></body></html>
