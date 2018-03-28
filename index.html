@@ -54,8 +54,8 @@ $(function(){
 })</script></head><body><div id="head"><div class="container"><div class="row"><div class="col-sm-12"><img id="logo" src="wonder.png"><h2>Easy - Functional - Lazy</h2><br><h3><code>npm install -g wonderlang</code></h3><br><a class="fa fa-angle-down fa-5x text-danger" id="headc" href="#tail"></a></div></div></div></div><div id="tail"><div class="container"><div class="row"><div class="col-md-6"><pre class="c"><code class="language-wr line-numbers">#. SUPER-SIMPLE CHATBOT
 
 #. Output then input
-loop \ @(
-  oN con "< " #0;
+loop \ x\\(
+  oN ++ "< " #x;
   rl ()
 );
 
@@ -63,12 +63,12 @@ loop \ @(
 name \ loop "What is your name?";
 reply \ loop join "" [
   "Hello, "
-  #name
+  rstr [`\n`g ""] #name
   ". I'll copy you from now on."
 ];
 
 #. Keep copying input
-while #[1 loop] reply</code></pre></div><div class="col-md-6"><h1 class="text-success"><u>Easy</u></h1><p>Everything is simple, from installation to programming to package management. 
+while [1 loop] reply</code></pre></div><div class="col-md-6"><h1 class="text-success"><u>Easy</u></h1><p>Everything is simple, from installation to programming to package management. 
 This is by design! 
 <b>Wonder</b> is for those who want a no-frills coding process.</p></div></div><hr><br><div class="row"><div class="col-md-6"><h1 class="text-warning"><u>Functional</u></h1><p><b>Wonder</b> is a functional programming language; most notably, it implements <a href='https://en.wikipedia.org/wiki/De_Bruijn_index' target='_blank'>de Bruijn indices</a> directly in the syntax. 
 Add in other sugary features such as currying, prefix notation, and dynamic typing and you've got yourself one helluva language.
@@ -81,15 +81,13 @@ join "" map #fc tk 127 gen I  #. total overkill
 (fc (rng 0 127))              #. lisp junkie
 
 #. Fibonacci sequence with memoization
-f\ .{
-  0\ 0;
-  1\ 1;
-  @(
-    f\ set #[#0 x] f;
-    x
-  )x\ (+ f - #0 1) f - #0 2
-};
-map #f rng 1 50</code></pre></div></div><hr><br><div class="row"><div class="col-md-6"><pre class="c"><code class="language-wr line-numbers">#. Lambda bodies do not evaluate unless applied.
+f\ 0\\0;
+f\ 1\\1;
+f\\\ x\\(
+  f\#x\\#y;
+  #y
+) y\ (+ f - #x 1) f - #x 2;
+oN map #f rng 1 50</code></pre></div></div><hr><br><div class="row"><div class="col-md-6"><pre class="c"><code class="language-wr line-numbers">#. Lambda bodies do not evaluate unless applied.
 @+1 1; #. does not become @2 yet
 
 #. Conditionals evaluate one expression

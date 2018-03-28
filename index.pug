@@ -98,8 +98,8 @@ html
               #. SUPER-SIMPLE CHATBOT
               
               #. Output then input
-              loop \ @(
-                oN con "< " #0;
+              loop \ x\\(
+                oN ++ "< " #x;
                 rl ()
               );
               
@@ -107,12 +107,12 @@ html
               name \ loop "What is your name?";
               reply \ loop join "" [
                 "Hello, "
-                #name
+                rstr [`\n`g ""] #name
                 ". I'll copy you from now on."
               ];
               
               #. Keep copying input
-              while \#[1 loop] reply
+              while [1 loop] reply
           .col-md-6
             h1.text-success: u Easy
             p.
@@ -139,15 +139,13 @@ html
               (fc (rng 0 127))              #. lisp junkie
               
               #. Fibonacci sequence with memoization
-              f\ .{
-                0\ 0;
-                1\ 1;
-                @(
-                  f\ set \#[#0 x] f;
-                  x
-                )x\ (+ f - #0 1) f - #0 2
-              };
-              map #f rng 1 50
+              f\ 0\\0;
+              f\ 1\\1;
+              f\\\ x\\(
+                f\#x\\#y;
+                #y
+              ) y\ (+ f - #x 1) f - #x 2;
+              oN map #f rng 1 50
         hr
         br
         .row
